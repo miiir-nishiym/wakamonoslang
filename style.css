@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.secondry-menu {
+    padding-left: 20px;
+}
