@@ -1,14 +1,122 @@
 @charset "UTF-8";
 
+/*背景画面を指定、繰り返し表示をなくし、サイズを全画面にして固定する*/
+body {
+    background-image: url(images/background.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/*スクロールする画面の設定*/
+.scroll {
+    width: 30%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/*メインビジュアル*/
 header img {
     width: 100%;
     height: auto;
 }
 
-nav ul {
-    list-style: none;
+.article01 {
+    background-image: url(images/kaisetu.PNG);
 }
 
-.secondry-menu {
-    padding-left: 20px;
+
+
+
+
+
+
+
+
+/*タブの装飾*/
+.tab-group {
+    margin-top: 20px;
+    /* タブ全体の幅 */
+    width: 425px;
+    list-style: none;
+    text-align: center;
+}
+
+.tab-button {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /* カーソル形状を指先にする */
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-button .is-active {
+    background: #4bab80;
+    border: 2px solid #4bab80;
+    color: #FFF;
+}
+
+.tab {
+    width: calc(100% / 2);
+    border: 2px solid #ccebdc;
+    padding: 8px;
+    border-bottom: none;
+}
+
+.tab-contents {
+    border-top: none;
+    background: #ccebdc;
+}
+
+.content {
+    display: none;
+    padding: 0px;
+    text-align: left;
+}
+
+/*タブの機能の中身の箱*/
+.content.is-display {
+    display: block;
+    border: 2px solid #4bab80;
+    height: 1200px;
+}
+
+
+
+
+
+
+
+
+
+/*場面別の画像*/
+.text-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+    text-indent: -10px;/*←箇条点の位置をずらす*/
+}
+
+.text-img li {
+	width: 30%;/*←画像を横に2つ並べる場合*/
+	margin: 10px;
+	box-sizing:border-box;
+}
+
+.text-img img {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+}
+
+footer {
+    background-color: black;
+    height: 70px;
+    color: white;
+    text-align: center;
 }
