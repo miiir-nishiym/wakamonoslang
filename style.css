@@ -1,20 +1,14 @@
 @charset "UTF-8";
 
-/*背景画面を指定、繰り返し表示をなくし、サイズを全画面にして固定する*/
-body {
-    background-image: url(images/background.PNG);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 
 
-/*スクロールする画面の設定*/
-.scroll {
-    width: 30%;
-    margin: 0 auto;
-    background-color: white;
-}
+/*トップページ*/
+
+.wrapper{
+    min-height: 100vh;/*①高さの最小値*/
+    position: relative;/*②相対位置*/
+  }
+  
 
 /*メインビジュアル*/
 header img {
@@ -22,15 +16,96 @@ header img {
     height: auto;
 }
 
+
+/*記事の装飾*/
 .article01 {
-    background-image: url(images/kaisetu.PNG);
+    display: flex;
+    background: rgb(255, 255, 255); 
+	padding: 100px;  
 }
 
 
 
+.hello {
+    padding: 245px 200px 245px; /*上　左右　下*/
+}
+
+.hello01 {
+    font-size: 60px; /*HELLOの文字サイズ*/
+    font-weight: bold; /*太さ*/
+    margin: 0;
+}
+
+.hello02 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.hello-text {
+    background: #c4c4c4; 
+    border-radius: 40px; /*角丸*/
+    margin: 10px 50px 10px;
+}
+
+.hello-text p {
+    margin: 50px; /*枠内の文字周り*/
+}
 
 
 
+.article02 {
+    display: flex;
+    background: #c4c4c4; 
+	padding: 100px; 
+}
+
+.how {
+    padding: 245px 100px 245px;
+}
+
+.how01 {
+    font-size: 60px; /*HOW TO USEの文字サイズ*/
+    font-weight: bold; /*太さ*/
+    margin: 0;
+}
+
+.how02 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.how-text {
+    background: rgb(255, 255, 255); 
+    border-radius: 40px; /*角丸*/
+    margin: 10px 50px 10px;
+
+}
+
+.how-text p {
+    margin: 50px;
+}
+
+
+
+/*検索ページ*/
+.search {
+    padding: 200px 200px 100px 200px; 
+}
+
+.search01 {
+    font-size: 60px; /*HELLOの文字サイズ*/
+    font-weight: bold; /*太さ*/
+    margin: 0;
+    text-align: center;
+}
+
+.search02 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+}
 
 
 
@@ -38,58 +113,58 @@ header img {
 .tab-group {
     margin-top: 20px;
     /* タブ全体の幅 */
-    width: 425px;
+    width: 100%;
+    height: auto;
     list-style: none;
     text-align: center;
 }
 
+/*タブ部分の調整*/
 .tab-button {
     display: flex;
     justify-content: space-between;
     list-style: none;
     /* カーソル形状を指先にする */
     cursor: pointer;
-    padding: 0;
+    padding: 50px;
     margin: 0;
 }
 
+/*タブを押したとき*/
 .tab-button .is-active {
-    background: #4bab80;
-    border: 2px solid #4bab80;
+    background: #c4c4c4;
+    border: 2px solid #c4c4c4;
     color: #FFF;
 }
 
+/*タブを押していないとき*/
 .tab {
     width: calc(100% / 2);
-    border: 2px solid #ccebdc;
-    padding: 8px;
-    border-bottom: none;
+    border: 5px solid #c4c4c4; /*たぶ外線*/
+    padding: 40px;
+    margin: 70px;
+    border-radius: 40px;
+
 }
 
 .tab-contents {
     border-top: none;
-    background: #ccebdc;
+    background: #ffffff;
 }
 
+/*コンテンツの調整*/
 .content {
     display: none;
-    padding: 0px;
+    padding: 50px;
     text-align: left;
 }
 
 /*タブの機能の中身の箱*/
 .content.is-display {
     display: block;
-    border: 2px solid #4bab80;
-    height: 1200px;
+    border: 2px solid #ffffff;
+    height: auto;
 }
-
-
-
-
-
-
-
 
 
 /*場面別の画像*/
@@ -103,8 +178,8 @@ header img {
 }
 
 .text-img li {
-	width: 30%;/*←画像を横に2つ並べる場合*/
-	margin: 10px;
+	width: 20%;/*←画像を横に2つ並べる場合*/
+	margin: 30px;
 	box-sizing:border-box;
 }
 
@@ -114,9 +189,148 @@ header img {
     margin: 10px;
 }
 
+.scene-text {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+}
+
+
+/*フッター*/
 footer {
     background-color: black;
+    width: 100%;
     height: 70px;
-    color: white;
+    color: rgb(105, 105, 105);
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*個別ページ*/
+
+.page_visual {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/*関連する言葉一覧*/
+
+.related {
+    padding: 245px 100px 150px;
+}
+
+.related01 {
+    font-size: 60px; /*HOW TO USEの文字サイズ*/
+    font-weight: bold; /*太さ*/
+    margin: 0;
     text-align: center;
 }
+
+.related02 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+/*タグの調整*/
+.related-words ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0px 100px 230px;
+    list-style: none;
+    text-indent: -10px;/*←箇条点の位置をずらす*/
+}
+
+.related-words li {
+    border: 5px solid #c4c4c4;
+    padding: 25px 60px 25px 60px;
+    border-radius: 60px;
+    font-size: 25px;
+}
+
+
+/*辞書部分*/
+
+.dictionary {
+    background: #c4c4c4;
+    padding: 10px 0px 100px 0px;
+}
+
+.contents {
+    background:rgb(255, 255, 255);
+    border-radius: 0px 40px 40px 40px;
+    margin: 0px 80px 80px 80px;
+}
+
+/*見出し*/
+.word-wrap {
+    background: rgb(105, 105, 105);
+    padding: 10px;
+    margin: 400px 860px 0px 80px;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.word01 {
+    font-size: 60px; /*HOW TO USEの文字サイズ*/
+    font-weight: bold; /*太さ*/
+    margin: 0;
+    padding: 40px 50px 0px 50px;
+    text-align: center;
+}
+
+.word02 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0px 50px 40px 50px;
+    text-align: center;
+}
+
+/*コンテンツの中身*/
+
+.text01 {
+    font-size: 30px; /*文字サイズ*/
+    font-weight: bold; /*太さ*/
+    margin: 0px 50px 0px 50px;
+    padding: 100px 50px 0px 50px;
+}
+
+.text02 {
+    font-size: 30px;
+    margin: 0px 50px 0px 50px;
+    padding: 0px 50px 40px 50px;
+}
+
+.text-color {
+    color: red;
+}
+
+
+.return-button {
+    background: black;
+    text-align: center;
+    padding: 40px;
+    margin: 300px 500px 100px 500px;
+    border-radius: 40px;
+}
+
+.return-button p {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
