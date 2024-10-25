@@ -196,6 +196,16 @@ header img {
 }
 
 
+
+
+/*五十音検索*/
+.word-text li {
+    display: flex;
+}
+
+
+
+
 /*フッター*/
 footer {
     background-color: black;
