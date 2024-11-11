@@ -15,3 +15,23 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementsByClassName('content')[index].classList.add('is-display');
     };
 }, false);
+
+
+
+
+//スムーススクロール
+const scorrllLinks = document.querySelectorAll('a[href^="#"]');
+scorrllLinks.forEach((scorrllLink) => {
+  scorrllLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const hrefLink = scorrllLink.getAttribute("href");
+    const targetContent = document.getElementById(hrefLink.replace("#", ""));
+    const rectTop = targetContent.getBoundingClientRect().top;
+    const positionY = window.pageYOffset;
+    const target = rectTop + positionY;
+    window.scrollTo({
+      top: target,
+      behavior: "smooth",
+    });
+  });
+});
