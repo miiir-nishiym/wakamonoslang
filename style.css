@@ -4,6 +4,10 @@
 
 /*トップページ*/
 
+body {
+    margin: 0;
+}
+
 .wrapper{
     min-height: 100vh;/*①高さの最小値*/
     position: relative;/*②相対位置*/
@@ -53,6 +57,7 @@ header img {
 
 
 /*記事の装飾*/
+/*HELLO*/
 .article01 {
     display: flex;
     background: rgb(255, 255, 255); 
@@ -90,7 +95,7 @@ header img {
 }
 
 
-
+/*How to Use*/
 .article02 {
     display: flex;
     background: #c4c4c4; 
@@ -128,19 +133,19 @@ header img {
 
 
 
-/*検索ページ*/
-.search {
+/*リストページ*/
+.list {
     padding: 200px 200px 100px 200px; 
 }
 
-.search01 {
+.list01 {
     font-size: 60px; /*HELLOの文字サイズ*/
     font-weight: bold; /*太さ*/
     margin: 0;
     text-align: center;
 }
 
-.search02 {
+.list02 {
     font-size: 30px;
     margin: 0;
     text-align: center;
@@ -206,6 +211,8 @@ header img {
 }
 
 
+
+
 /*場面別の画像*/
 .text-img {
     display: flex;
@@ -254,6 +261,7 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
 
 
 
@@ -383,3 +391,164 @@ footer {
 
 
 
+
+
+
+
+@media screen and (max-width: 844px){
+
+
+    /*メニュー*/
+    nav ul {
+        display: block;
+        padding: 0;
+        justify-content: center; /*中央に配置*/
+    }
+
+    /*HELLO*/
+    .article01 {
+        display: block;
+        background: rgb(255, 255, 255); 
+        padding: 0;  
+        align-items: center; /*上下の中央に配置*/
+    }
+
+    .hello {
+        padding: 24px 20px 24px; /*上　左右　下*/
+    }
+    
+    .hello01 {
+        font-size: 5px; /*HELLOの文字サイズ*/
+        font-weight: bold; /*太さ*/
+        margin: 0;
+    }
+    
+    .hello02 {
+        font-size: 30px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .hello-text {
+        background: #c4c4c4; 
+        border-radius: 40px; /*角丸*/
+        margin: 10px 50px 10px;
+        padding: 10px;
+    }
+    
+    .hello-text p {
+        margin: 50px; /*枠内の文字周り*/
+    }
+
+
+
+    /*HOW TO USE*/
+    .article02 {
+        flex-direction: column-reverse;
+        display: flex;
+        background: #c4c4c4; 
+        padding: 100px; 
+        align-items: center; /*上下の中央に配置*/
+    }
+    
+    .how {
+        padding: 24px 20px 24px;
+    }
+    
+    .how01 {
+        font-size: 5px; /*HOW TO USEの文字サイズ*/
+        font-weight: bold; /*太さ*/
+        margin: 0;
+    }
+    
+    .how02 {
+        font-size: 30px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .how-text {
+        background: rgb(255, 255, 255); 
+        border-radius: 40px; /*角丸*/
+        margin: 10px 50px 10px;
+        padding: 10px;
+    
+    }
+    
+    .how-text p {
+        margin: 50px;
+    }
+    
+    
+    /*リストページ*/
+    /*文字*/
+    .list {
+        padding: 20px 20px 10px 20px; 
+    }
+    
+    .list01 {
+        font-size: 60px; /*HELLOの文字サイズ*/
+        font-weight: bold; /*太さ*/
+        margin: 0;
+        text-align: center;
+    }
+    
+    .list02 {
+        font-size: 30px;
+        margin: 0;
+        text-align: center;
+    }
+
+
+    /*タブ部分の調整*/
+    .tab-button {
+        display: block;
+        justify-content: space-between;
+        list-style: none;
+        /* カーソル形状を指先にする */
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+    }
+
+    .tab {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+
+
+
+    /*シーン*/
+    .text-img li {
+        width: 50%;/*←画像を横に2つ並べる場合*/
+        margin: 0;
+    }
+    
+    .text-img img {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+    
+    .scene-text {
+        text-align: center;
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    
+    .content {
+        padding: 10px;
+    }
+    
+
+    /*フッター*/
+    footer {
+        height: 70px;
+        color: rgb(105, 105, 105);
+        padding: 0;
+    }
+
+
+}
