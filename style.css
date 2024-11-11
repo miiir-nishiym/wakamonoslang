@@ -9,6 +9,41 @@
     position: relative;/*②相対位置*/
   }
   
+/*メニューバー*/
+nav {
+    background:rgb(105, 105, 105);
+    opacity: 0.9; /*メニューバーの背景を透過させる*/
+    padding: 5px;
+    box-sizing: border-box;
+    /*メニューバーを上部に固定*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    justify-content: center; /*中央に配置*/
+}
+
+nav li {
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav a {
+    display: block;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: pink;
+} 
+
 
 /*メインビジュアル*/
 header img {
@@ -22,6 +57,7 @@ header img {
     display: flex;
     background: rgb(255, 255, 255); 
 	padding: 100px;  
+    align-items: center; /*上下の中央に配置*/
 }
 
 
@@ -46,6 +82,7 @@ header img {
     background: #c4c4c4; 
     border-radius: 40px; /*角丸*/
     margin: 10px 50px 10px;
+    padding: 10px;
 }
 
 .hello-text p {
@@ -58,6 +95,7 @@ header img {
     display: flex;
     background: #c4c4c4; 
 	padding: 100px; 
+    align-items: center; /*上下の中央に配置*/
 }
 
 .how {
@@ -80,6 +118,7 @@ header img {
     background: rgb(255, 255, 255); 
     border-radius: 40px; /*角丸*/
     margin: 10px 50px 10px;
+    padding: 10px;
 
 }
 
