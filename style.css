@@ -1,11 +1,18 @@
 @charset "UTF-8";
 
 
-
+/*imacで見た時*/
 /*トップページ*/
 
 body {
     margin: 0;
+}
+
+/*メインビジュアルの大きさ*/
+.mainvisual {
+    width: 1280px;
+    height: auto;
+    margin: 0 auto;
 }
 
 .wrapper{
@@ -58,21 +65,23 @@ header img {
 
 /*記事の装飾*/
 /*HELLO*/
-.article01 {
+.hello {
+    padding: 245px 200px 245px; /*上　左右　下*/
+}
+.hello-box {
     display: flex;
+    justify-content: center;
     background: rgb(255, 255, 255); 
 	padding: 100px;  
     align-items: center; /*上下の中央に配置*/
 }
 
-
-
-.hello {
-    padding: 245px 200px 245px; /*上　左右　下*/
+.textbox {
+    width: 700px; /*枠の横幅を固定*/
 }
 
 .hello01 {
-    font-size: 60px; /*HELLOの文字サイズ*/
+    font-size: 90px; /*HELLOの文字サイズ*/
     font-weight: bold; /*太さ*/
     margin: 0;
 }
@@ -96,8 +105,11 @@ header img {
 
 
 /*How to Use*/
-.article02 {
+
+
+.how-box {
     display: flex;
+    justify-content: center;
     background: #c4c4c4; 
 	padding: 100px; 
     align-items: center; /*上下の中央に配置*/
@@ -105,6 +117,10 @@ header img {
 
 .how {
     padding: 245px 100px 245px;
+}
+
+.how-textbox {
+    width: 700px; /*枠の横幅を固定*/
 }
 
 .how01 {
@@ -165,8 +181,6 @@ header img {
 
 /*タブ部分の調整*/
 .tab-button {
-    display: flex;
-    justify-content: space-between;
     list-style: none;
     /* カーソル形状を指先にする */
     cursor: pointer;
@@ -183,12 +197,17 @@ header img {
 
 /*タブを押していないとき*/
 .tab {
-    width: calc(100% / 2);
+    width: 300px;
     border: 5px solid #c4c4c4; /*たぶ外線*/
     padding: 40px;
-    margin: 70px;
+    margin: 20px;
     border-radius: 40px;
 
+}
+
+.tab-box {
+    display: flex;
+    justify-content: center;
 }
 
 .tab-contents {
@@ -208,6 +227,8 @@ header img {
     display: block;
     border: 2px solid #ffffff;
     height: auto;
+    width: 1595px;
+    margin: 0 auto; /*中央寄せ*/
 }
 
 
@@ -217,10 +238,11 @@ header img {
 .text-img {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0;
     list-style: none;
     text-indent: -10px;/*←箇条点の位置をずらす*/
+    width: 100%;
 }
 
 .text-img li {
@@ -274,8 +296,9 @@ footer {
 /*個別ページ*/
 
 .page_visual {
-    width: 100%;
+    width: 1280px;
     height: auto;
+    margin: 0 auto;
 }
 
 
@@ -391,10 +414,15 @@ footer {
 
 
 
+@media screen and (min-width: 2559px){
+    .content.is-display {
+        width: 1584px;
+      }
+}
 
 
 
-
+/*スマホサイズ*/
 @media screen and (max-width: 844px){
 
 
@@ -552,3 +580,7 @@ footer {
 
 
 }
+
+
+
+
