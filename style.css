@@ -199,10 +199,13 @@ header img {
 .tab {
     width: 300px;
     border: 5px solid #c4c4c4; /*たぶ外線*/
-    padding: 40px;
     margin: 20px;
     border-radius: 40px;
 
+}
+
+.tab-text {
+    padding: 20px;
 }
 
 .tab-box {
@@ -350,7 +353,7 @@ footer {
 
 
 .article03 {
-    width: 1280px;
+    width: 900px;
     margin: 300px auto;
 }
 
@@ -388,12 +391,12 @@ footer {
 .related-words li {
     border: 5px solid #c4c4c4;
     margin: 0px 30px 0px 0px;
-    border-radius: 60px;
+    border-radius: 40px;
     font-size: 25px;
 }
 
 .related-words p {
-    padding: 30px;
+    padding: 20px 50px;
     margin: 0 auto;
 }
 
@@ -413,7 +416,8 @@ footer {
 
 .contents {
     background:rgb(255, 255, 255);
-    border-radius: 0px 40px 40px 40px;
+    border-radius: 0px 0px 40px 40px;
+    padding: 140px 70px 70px 70px;
 }
 
 /*見出し*/
@@ -443,14 +447,14 @@ footer {
 .text01 {
     font-size: 30px; /*文字サイズ*/
     font-weight: bold; /*太さ*/
-    margin: 0px 50px 0px 50px;
-    padding: 100px 50px 0px 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .text02 {
-    font-size: 30px;
-    margin: 0px 50px 0px 50px;
-    padding: 0px 50px 40px 50px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0px 0px 70px 0px;
 }
 
 .text-color {
@@ -478,7 +482,7 @@ footer {
 
 
 
-
+/*大画面より小さいサイズ*/
 @media screen and (max-width: 2559px){
     .content.is-display {
         width: 1584px;
@@ -487,7 +491,7 @@ footer {
 
 
 /*PCサイズ*/
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1690px){
     .content.is-display {
         width: 1150px;
       }
@@ -499,8 +503,78 @@ footer {
 
 
 
-/*スマホサイズ*/
-@media screen and (max-width: 844px){
+
+/*iPad横サイズ*/
+@media screen and (max-width: 1660px){
+    .mainvisual {
+        width: 100%;
+    }
+
+    .hello {
+        padding: 70px 70px 70px 50px;
+    }
+
+    .hello-box {
+        padding: 250px 125px;
+    }
+
+    .hello-text {
+        margin: 0;
+    }
+
+
+    .how {
+        padding: 70px 50px 70px 70px;
+    }
+
+    .how-text {
+        margin: 0;
+    }
+
+        
+    .how-box {
+        padding: 250px 125px;
+    }
+}
+
+
+/*iPad縦サイズ*/
+@media screen and (max-width: 1290px){
+    .hello-box {
+        display: block;
+        text-align: center;
+    }
+
+    .textbox {
+        margin: 0 auto 200px;
+    }
+
+    .hello {
+        padding: 200px 0px 100px;
+    }
+
+    .how-box {
+        flex-direction: column-reverse;
+    }
+
+     .how {
+        padding: 200px 0px 100px;
+     }
+
+     .content.is-display {
+        width: 900px;
+     }
+
+     .text-img li {
+        width: 240px;
+    }
+}
+
+
+
+
+/*スマホ横サイズ*/
+@media screen and (max-width: 1000px){
 
 
     /*メニュー*/
@@ -523,13 +597,13 @@ footer {
     }
     
     .hello01 {
-        font-size: 5px; /*HELLOの文字サイズ*/
+        font-size: 40px; /*HELLOの文字サイズ*/
         font-weight: bold; /*太さ*/
         margin: 0;
     }
     
     .hello02 {
-        font-size: 30px;
+        font-size: 20px;
         margin: 0;
         text-align: center;
     }
@@ -561,13 +635,13 @@ footer {
     }
     
     .how01 {
-        font-size: 5px; /*HOW TO USEの文字サイズ*/
+        font-size: 40px; /*HOW TO USEの文字サイズ*/
         font-weight: bold; /*太さ*/
         margin: 0;
     }
     
     .how02 {
-        font-size: 30px;
+        font-size: 20px;
         margin: 0;
         text-align: center;
     }
@@ -583,6 +657,10 @@ footer {
     .how-text p {
         margin: 50px;
     }
+
+    .how-box {
+        padding: 250px 0px;
+    }
     
     
     /*リストページ*/
@@ -592,14 +670,14 @@ footer {
     }
     
     .list01 {
-        font-size: 60px; /*HELLOの文字サイズ*/
+        font-size: 40px; /*HELLOの文字サイズ*/
         font-weight: bold; /*太さ*/
         margin: 0;
         text-align: center;
     }
     
     .list02 {
-        font-size: 30px;
+        font-size: 20px;
         margin: 0;
         text-align: center;
     }
@@ -617,8 +695,11 @@ footer {
     }
 
     .tab {
-        margin: 0 auto;
-        padding: 20px;
+        padding: 0;
+    }
+
+    .tab-text {
+        padding: 0px;
     }
 
 
@@ -626,7 +707,7 @@ footer {
 
     /*シーン*/
     .text-img li {
-        width: 50%;/*←画像を横に2つ並べる場合*/
+        width: 30%;/*←画像を横に2つ並べる場合*/
         margin: 0;
     }
     
@@ -657,6 +738,41 @@ footer {
 
 
 }
+
+
+
+
+/*スマホ縦サイズ*/
+@media screen and (max-width: 800px){
+
+    .textbox {
+        width: 100%;
+    }
+
+    .hello-box {
+        padding: 0;
+    }
+
+    .how-text {
+        margin: 0;
+    }
+
+    .text-img li {
+        width: 40%;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .content.is-display {
+        width: 99%;
+    }
+
+    
+}
+
+
 
 
 
