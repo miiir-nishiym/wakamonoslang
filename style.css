@@ -236,6 +236,7 @@ header img {
 
 /*場面別の画像*/
 .text-img {
+    /*background: pink;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -267,11 +268,57 @@ header img {
 
 
 /*五十音検索*/
-.word-text li {
-    display: flex;
+
+.j-name {
+    text-align: center;
+    font-size: 50px;
 }
 
 
+.j {
+    /*background: pink;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    text-indent: -10px;/*←箇条点の位置をずらす*/
+    width: 100%;
+}
+
+
+.j-word-box {
+    display: flex;
+    background: #fff;
+    border: 0.25rem solid #c4c4c4;
+    width: 100%;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.j-word-minibox {
+    margin: 20px;
+}
+
+.j-word {
+    background: #c4c4c4;
+    border-radius: 40px;
+}
+
+.j-word li {
+    margin: 0;
+}
+
+.j-text {
+    padding: 20px 50px;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
 
 
 /*フッター*/
@@ -281,7 +328,7 @@ footer {
     height: 70px;
     color: rgb(105, 105, 105);
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px;
 }
 
 
@@ -301,6 +348,11 @@ footer {
     margin: 0 auto;
 }
 
+
+.article03 {
+    width: 1280px;
+    margin: 300px auto;
+}
 
 
 /*関連する言葉一覧*/
@@ -326,7 +378,7 @@ footer {
 .related-words ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0;
     margin: 0px 100px 230px;
     list-style: none;
@@ -335,10 +387,17 @@ footer {
 
 .related-words li {
     border: 5px solid #c4c4c4;
-    padding: 25px 60px 25px 60px;
+    margin: 0px 30px 0px 0px;
     border-radius: 60px;
     font-size: 25px;
 }
+
+.related-words p {
+    padding: 30px;
+    margin: 0 auto;
+}
+
+
 
 
 /*辞書部分*/
@@ -348,17 +407,19 @@ footer {
     padding: 10px 0px 100px 0px;
 }
 
+.dictionary-box {
+    width: 100%;
+}
+
 .contents {
     background:rgb(255, 255, 255);
     border-radius: 0px 40px 40px 40px;
-    margin: 0px 80px 80px 80px;
 }
 
 /*見出し*/
 .word-wrap {
     background: rgb(105, 105, 105);
     padding: 10px;
-    margin: 400px 860px 0px 80px;
     border-radius: 40px 40px 0px 0px;
 }
 
@@ -396,27 +457,43 @@ footer {
     color: red;
 }
 
+.return-box {
+    margin: 300px;
+}
 
 .return-button {
     background: black;
+    width: 300px;
     text-align: center;
-    padding: 40px;
-    margin: 300px 500px 100px 500px;
     border-radius: 40px;
+    margin: 0 auto;
 }
 
 .return-button p {
     color: white;
-    margin: 0;
-    padding: 0;
+    padding: 40px;
 }
 
 
 
 
-@media screen and (min-width: 2559px){
+
+
+@media screen and (max-width: 2559px){
     .content.is-display {
         width: 1584px;
+      }
+}
+
+
+/*PCサイズ*/
+@media screen and (max-width: 1280px){
+    .content.is-display {
+        width: 1150px;
+      }
+
+      .text-img li {
+        width: 200px;
       }
 }
 
@@ -580,6 +657,7 @@ footer {
 
 
 }
+
 
 
 
