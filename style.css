@@ -499,6 +499,11 @@ footer {
       .text-img li {
         width: 200px;
       }
+
+     .page_visual {
+        width: 500px;
+        height: auto;
+      }
 }
 
 
