@@ -6,13 +6,26 @@
 
 body {
     margin: 0;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+
+    /*背景を固定する*/
+    background-image: url("images/background.PNG");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+
+
+
 
 /*メインビジュアルの大きさ*/
 .mainvisual {
     width: 1280px;
     height: auto;
     margin: 0 auto;
+    background: white;
 }
 
 .wrapper{
@@ -22,15 +35,17 @@ body {
   
 /*メニューバー*/
 nav {
-    background:rgb(105, 105, 105);
-    opacity: 0.9; /*メニューバーの背景を透過させる*/
+    background:white;
+    border: 3px solid black;
+    border-radius: 43px;
+    /*opacity: 0.9; メニューバーの背景を透過させる*/
     padding: 5px;
     box-sizing: border-box;
     /*メニューバーを上部に固定*/
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 700px;
     height: auto;
 }
 
@@ -47,7 +62,8 @@ nav li {
 
 nav a {
     display: block;
-    color:rgb(255, 255, 255);
+    color: black;
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -71,29 +87,31 @@ header img {
 .hello-box {
     display: flex;
     justify-content: center;
-    background: rgb(255, 255, 255); 
+    background: #51E4EC; 
 	padding: 100px;  
     align-items: center; /*上下の中央に配置*/
 }
 
 .textbox {
-    width: 700px; /*枠の横幅を固定*/
+    width: 632px; /*枠の横幅を固定*/
 }
 
 .hello01 {
     font-size: 90px; /*HELLOの文字サイズ*/
     font-weight: bold; /*太さ*/
     margin: 0;
+    color: white;
 }
 
 .hello02 {
-    font-size: 30px;
     margin: 0;
     text-align: center;
+    font-size: 40px;
+    color: white;
 }
 
 .hello-text {
-    background: #c4c4c4; 
+    background: white; 
     border-radius: 40px; /*角丸*/
     margin: 10px 50px 10px;
     padding: 10px;
@@ -101,6 +119,8 @@ header img {
 
 .hello-text p {
     margin: 50px; /*枠内の文字周り*/
+    font-weight: 700;
+    font-size: 25px;
 }
 
 
@@ -110,7 +130,7 @@ header img {
 .how-box {
     display: flex;
     justify-content: center;
-    background: #c4c4c4; 
+    background: white; 
 	padding: 100px; 
     align-items: center; /*上下の中央に配置*/
 }
@@ -136,7 +156,7 @@ header img {
 }
 
 .how-text {
-    background: rgb(255, 255, 255); 
+    background: #51E4EC; 
     border-radius: 40px; /*角丸*/
     margin: 10px 50px 10px;
     padding: 10px;
@@ -145,24 +165,35 @@ header img {
 
 .how-text p {
     margin: 50px;
+    font-weight: 700;
+    font-size: 25px;
 }
 
 
 
 /*リストページ*/
+.list-box {
+    padding: 140px 57px;
+    background-color: white;
+    margin: 57px 57px 200px 57px;
+    border-radius: 43px;
+}
+
+
+
 .list {
-    padding: 200px 200px 100px 200px; 
+    padding: 0px 0px 50px 0px; 
 }
 
 .list01 {
-    font-size: 60px; /*HELLOの文字サイズ*/
+    font-size: 100px; /*HELLOの文字サイズ*/
     font-weight: bold; /*太さ*/
     margin: 0;
     text-align: center;
 }
 
 .list02 {
-    font-size: 30px;
+    font-size: 50px;
     margin: 0;
     text-align: center;
 }
@@ -188,19 +219,37 @@ header img {
     margin: 0;
 }
 
+.tab-minibox {
+    padding: 30px;
+}
+
+.tab-mini01 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.tab-mini02 {
+    font-size: 20px;
+    margin: 0;
+}
+
+
 /*タブを押したとき*/
 .tab-button .is-active {
-    background: #c4c4c4;
-    border: 2px solid #c4c4c4;
-    color: #FFF;
+    background: #51E4EC;
+    border: 3px solid black;
+    box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+    color: black;
 }
 
 /*タブを押していないとき*/
 .tab {
     width: 300px;
-    border: 5px solid #c4c4c4; /*たぶ外線*/
+    background-color: white;
+    border: 3px solid black; /*たぶ外線*/
+    box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
     margin: 20px;
-    border-radius: 40px;
+    border-radius: 43px;
 
 }
 
@@ -259,6 +308,9 @@ header img {
     width: 100%;
     height: auto;
     margin: 10px;
+    box-shadow: 10px 10px 0px 0px rgba(255, 104, 158, 1);
+    border: solid 3px #000000;
+    border-radius: 40px;
 }
 
 .scene-text {
@@ -292,12 +344,11 @@ header img {
 
 .j-word-box {
     display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
     background: #fff;
-    border: 0.25rem solid #c4c4c4;
     width: 100%;
-    justify-content: center;
     border-radius: 20px;
-    padding: 50px;
 }
 
 .j-word-minibox {
@@ -305,17 +356,30 @@ header img {
 }
 
 .j-word {
-    background: #c4c4c4;
+    background: white;
+    border: 3px solid black;
     border-radius: 40px;
+    box-shadow: 10px 10px 0px 0px rgba(255, 104, 158, 1);
+    height: 100px;
+    padding: 0px 0px 20px 0px;
 }
 
 .j-word li {
     margin: 0;
+    padding: 10px 50px;
+    text-align: center;
 }
 
-.j-text {
-    padding: 20px 50px;
+.j-text01 {
+    font-size: 40px;
     margin: 0;
+    color: black;
+}
+
+.j-text02 {
+    margin: 0px;
+    font-size: 20px;
+    color: black;
 }
 
 
@@ -327,9 +391,9 @@ a {
 /*フッター*/
 footer {
     background-color: black;
+    color: white;
     width: 100%;
     height: 70px;
-    color: rgb(105, 105, 105);
     text-align: center;
     padding: 20px 0px;
 }
@@ -348,7 +412,12 @@ footer {
 .page_visual {
     width: 1280px;
     height: auto;
-    margin: 0 auto;
+    margin: 150px auto;
+}
+
+.page_visual img {
+    border: 3px solid black;
+    border-radius: 34px;
 }
 
 
@@ -360,9 +429,15 @@ footer {
 
 /*関連する言葉一覧*/
 
-.related {
-    padding: 245px 100px 150px;
+.related-box {
+    background-color: white;
 }
+
+.related-minibox {
+    padding: 100px;
+}
+
+
 
 .related01 {
     font-size: 60px; /*HOW TO USEの文字サイズ*/
@@ -406,7 +481,6 @@ footer {
 /*辞書部分*/
 
 .dictionary {
-    background: #c4c4c4;
     padding: 10px 0px 100px 0px;
 }
 
@@ -591,8 +665,7 @@ footer {
 
     /*HELLO*/
     .article01 {
-        display: block;
-        background: rgb(255, 255, 255); 
+        display: block; 
         padding: 0;  
         align-items: center; /*上下の中央に配置*/
     }
@@ -776,10 +849,6 @@ footer {
 
     
 }
-
-
-
-
 
 
 
