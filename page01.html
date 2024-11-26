@@ -14,18 +14,27 @@
 
 <body>
 
+  <!--戻るボタン-->
+  <button type="button" id="btn">トップへ</button>
+
 
     <!--個別ページのメインビジュアル-->
     <header>
-        <div class="page_visual">
-            <img src="images/laugh01.PNG"  alt="タイトル画面">
-        </div>  
+      <div class="page-visual-box">
+        <div class="page-visual">
+          <div class="page-text-box">
+            <p>LAUGH</p>
+          </div>
+          <img src="images/laugh01.PNG"  alt="タイトル画面">
+      </div>
+      </div>  
       </header>
 
 
       <!--関連する言葉一覧-->
 
       <div class="related-box">
+
         <div class="related-minibox">
           <div class="related">
             <p class="related01">RELATED&nbspWORDS</p>
@@ -34,99 +43,169 @@
     
           <div class="related-words">
             <ul>
-                <li>
-                  <a href="#">
-                    <p>ウケる</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>草</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>ゲラ</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <p>じわる</p>
-                  </a>
-                </li>
+              <div class="related-word-bigbox">
+                <div class="related-word-box">
+                  <div class="related-word-minibox">
+                    <a href="#ウケる">
+                      <div>
+                        <div class="related-word">
+                          <li>
+                            <p class="related-text01">Ukeru</p>
+                            <p class="related-text02" >ウケる</p>
+                          </li>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="related-word-minibox">
+                    <a href="#草">
+                      <div>
+                        <div class="related-word">
+                          <li>
+                            <p class="related-text01">Kusa</p>
+                            <p class="related-text02" >草</p>
+                          </li>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="related-word-minibox">
+                    <a href="#ゲラ">
+                      <div>
+                        <div class="related-word">
+                          <li>
+                            <p class="related-text01">Gera</p>
+                            <p class="related-text02" >ゲラ</p>
+                          </li>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="related-word-minibox">
+                    <a href="#じわる">
+                      <div>
+                        <div class="related-word">
+                          <li>
+                            <p class="related-text01">Jiwaru</p>
+                            <p class="related-text02">じわる</p>
+                          </li>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </ul>
           </div>
+
         </div>
+
       </div>
 
 
     
       <div class="dictionary">
 
-        <!--ウケる-->
-        <div class="dictionary-box">
-          <article class="article03">
-              <div class="word-wrap"><p class="word01">ウケる</p><p class="word02">Ukeru</p>
+        <article class="article03">
+          <!--ウケる-->
+          <div id="ウケる" class="dictionary-box">
+              <div class="word-wrap">
+                <p class="word01">Ukeru</p>
+                <p class="word02">ウケる</p>
               </div>
               <div class="contents">
-                  <p class="text01">MEANING</p><p class="text02">Funny</p>
-                  <p class="text01">EXAMPLE&nbspSENTENCE</p><p class="text02">「（友達の話を聞いて）それめっちゃ<span class="text-color">ウケる！</span>」
-                     <br>→(Listening to my friend's story)That's really <span class="text-color">Ukeru!</span></p>
-                  <p class="text01">ORIGIN</p><p class="text02">The word ukeru has existed since the Edo period in Japan. It was used as a dressing room word for comedians to mean receiving applause or having a good reputation at a play. From there, it gradually spread to many people. Ukeru, which means interesting, is a word that evolved from there.</p>
-                  <p class="text01">SYNONYM</p><p class="text02">草、くさ、笑笑、しぬ、爆笑、www</p>
+                  <p class="text01">MEANING</p>
+                  <p class="text02">Funny</p>
+                  <p class="text01">EXAMPLE&nbspSENTENCE</p>
+                  <p class="text02">「（友達の話を聞いて）それめっちゃ
+                    <span class="text-color">ウケる！</span>」
+                     <br>→(Listening to my friend's story)That's really 
+                     <span class="text-color">Ukeru!</span>
+                    </p>
+                  <p class="text01">ORIGIN</p>
+                  <p class="text02">The word ukeru has existed since the Edo period in Japan. It was used as a dressing room word for comedians to mean receiving applause or having a good reputation at a play. From there, it gradually spread to many people. Ukeru, which means interesting, is a word that evolved from there.</p>
+                  <p class="text01">SYNONYM</p>
+                  <p class="text02">草、くさ、笑笑、しぬ、爆笑、www</p>
               </div>
-          </article>
-        </div>
-
+            </div>
+        
           <!--草-->
-          <article class="article03">
-            <div class="word-wrap"><p class="word01">草</p><p class="word02">Kusa</p></div>
-            <div class="contents">
-                <p class="text01">MEANING</p><p class="text02">Funny</p>
-                <p class="text01">EXAMPLE&nbspSENTENCE</p><p class="text02">「（友達の話を聞いて）マジで<span class="text-color">草</span>」
-                   <br>→(Listening to my friend's story)That's really <span class="text-color">Kusa!</span></p>
-                <p class="text01">ORIGIN</p><p class="text02">テキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキスト</p>
-                <p class="text01">SYNONYM</p><p class="text02">草、くさ、笑笑、しぬ、爆笑、www</p>
+            <div id="草" class="dictionary-box">
+              <div class="word-wrap">
+                <p class="word01">Kusa</p>
+                <p class="word02">草</p>
+              </div>
+              <div class="contents">
+                <p class="text01">MEANING</p>
+                <p class="text02">Funny</p>
+                <p class="text01">EXAMPLE&nbspSENTENCE</p>
+                <p class="text02">「（友達の話を聞いて）マジで
+                  <span class="text-color">草</span>」
+                   <br>→(Listening to my friend's story)That's really 
+                   <span class="text-color">Kusa!</span></p>
+                <p class="text01">ORIGIN</p>
+                <p class="text02">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <p class="text01">SYNONYM</p>
+                <p class="text02">草、くさ、笑笑、しぬ、爆笑、www</p>
+              </div>
             </div>
-          </article>
-
+          
           <!--ゲラ-->
-          <article class="article03">
-            <div class="word-wrap"><p class="word01">ゲラ</p><p class="word02">Gera</p></div>
+            <div id="ゲラ" class="dictionary-box">
+              <div class="word-wrap">
+                <p class="word01">Gera</p>
+                <p class="word02">ゲラ</p>
+              </div>
             <div class="contents">
-                <p class="text01">MEANING</p><p class="text02">① Someone who laughs at everything.
+                <p class="text01">MEANING</p>
+                <p class="text02">① Someone who laughs at everything.
                     <br>② To open your mouth and laugh.</p>
-                <p class="text01">EXAMPLE&nbspSENTENCE</p><p class="text02">「私、<span class="text-color">ゲラ</span>なのですぐに笑ってしまいます。」
-                   <br>→I'm a <span class="text-color">Gera</span>, so I laugh easily.</p>
-                <p class="text01">ORIGIN</p><p class="text02">テキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキスト</p>
+                <p class="text01">EXAMPLE&nbspSENTENCE</p>
+                <p class="text02">「私、
+                  <span class="text-color">ゲラ</span>
+                  なのですぐに笑ってしまいます。」
+                   <br>→I'm a 
+                   <span class="text-color">Gera</span>, so I laugh easily.</p>
+                <p class="text01">ORIGIN</p>
+                <p class="text02">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+              </div>
             </div>
-          </article>
-
+          
           <!--じわる-->
-          <article class="article03">
-            <div class="word-wrap"><p class="word01">じわる</p><p class="word02">Jiwaru</p></div>
-            <div class="contents">
-                <p class="text01">MEANING</p><p class="text02">It's starting to get more interesting little by little.</p>
-                <p class="text01">EXAMPLE&nbspSENTENCE</p><p class="text02">「友達の話を思い出して<span class="text-color">じわる</span>。」
-                   <br>→I <span class="text-color">Jiwaru</span>when I remember a conversation with a friend.</p>
-                <p class="text01">ORIGIN</p><p class="text02">テキストテキストテキストテキストテキストテキスト
-                    テキストテキストテキストテキストテキスト</p>
-                <p class="text01">SYNONYM</p><p class="text02">草、くさ、笑笑、しぬ、爆笑、www</p>
+            <div id="じわる" class="dictionary-box">
+              <div class="word-wrap">
+                <p class="word01">Jiwaru</p>
+                <p class="word02">じわる</p>
+              </div>
+              <div class="contents">
+                <p class="text01">MEANING</p>
+                <p class="text02">It's starting to get more interesting little by little.</p>
+                <p class="text01">EXAMPLE&nbspSENTENCE</p>
+                <p class="text02">「友達の話を思い出して
+                  <span class="text-color">じわる</span>。」
+                   <br>→I 
+                   <span class="text-color">Jiwaru</span>when I remember a conversation with a friend.</p>
+                <p class="text01">ORIGIN</p>
+                <p class="text02">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                <p class="text01">SYNONYM</p>
+                <p class="text02">草、くさ、笑笑、しぬ、爆笑、www</p>
+              </div>
             </div>
           </article>
 
           <div class="return-box">
             <div class="return-button">
-              <a href="index.html"><p>RETURN TO SEARCH</p></a>
+              <div class="return-button-box">
+                <a href="index.html">
+                  <p class="return-text01">RETURN TO LIST</p>
+                  <p class="return-text02">リストに戻る</p>
+                </a>
+              </div>
             </div>
           </div>
 
 
       </div>
-
-
     
       
 
