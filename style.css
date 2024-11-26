@@ -12,20 +12,39 @@ body {
 
     /*背景を固定する*/
     background-image: url("images/background.PNG");
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+
+/*戻るボタン*/
+  #btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    cursor:pointer;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+  }
 
 
 
 
 
 /*メインビジュアルの大きさ*/
+ .mainvisual-box {
+    background: white;
+    padding: 100px 0px;
+
+ }
+
 .mainvisual {
     width: 1280px;
     height: auto;
     margin: 0 auto;
-    background: white;
+    background: white; /*メインビジュアルと次の記事の隙間を埋める*/
 }
 
 .wrapper{
@@ -34,9 +53,9 @@ body {
   }
   
 /*メニューバー*/
-nav {
+.nav-box {
     background:white;
-    border: 3px solid black;
+    border-bottom: 3px solid black;
     border-radius: 43px;
     /*opacity: 0.9; メニューバーの背景を透過させる*/
     padding: 5px;
@@ -49,7 +68,9 @@ nav {
     height: auto;
 }
 
-nav ul {
+
+
+.nav-ul {
     display: flex;
     padding: 0;
     justify-content: center; /*中央に配置*/
@@ -175,7 +196,7 @@ header img {
 .list-box {
     padding: 140px 57px;
     background-color: white;
-    margin: 57px 57px 200px 57px;
+    margin: 57px 400px 200px 400px;
     border-radius: 43px;
 }
 
@@ -270,7 +291,6 @@ header img {
 /*コンテンツの調整*/
 .content {
     display: none;
-    padding: 50px;
     text-align: left;
 }
 
@@ -409,19 +429,33 @@ footer {
 
 /*個別ページ*/
 
-.page_visual {
-    width: 1280px;
-    height: auto;
-    margin: 150px auto;
+.page-visual-box {
+    background: #51E4EC;
 }
 
-.page_visual img {
+.page-text-box {
+    text-align: center;
+}
+
+.page-text-box p {
+    font-size: 100px;
+    margin: 0px 0px 70px 0px;
+}
+
+.page-visual {
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    padding: 100px 0px;
+}
+
+.page-visual img {
     border: 3px solid black;
     border-radius: 34px;
 }
 
 
-.article03 {
+.dictionary-box {
     width: 900px;
     margin: 300px auto;
 }
@@ -434,7 +468,7 @@ footer {
 }
 
 .related-minibox {
-    padding: 100px;
+    padding: 300px;
 }
 
 
@@ -458,21 +492,53 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 0;
-    margin: 0px 100px 230px;
+    margin: 0;
     list-style: none;
     text-indent: -10px;/*←箇条点の位置をずらす*/
 }
 
-.related-words li {
-    border: 5px solid #c4c4c4;
-    margin: 0px 30px 0px 0px;
-    border-radius: 40px;
-    font-size: 25px;
+.related-word-bigbox {
+    padding: 100px 0px 0px 0px;
 }
 
-.related-words p {
-    padding: 20px 50px;
-    margin: 0 auto;
+.related-word-box {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    background: #fff;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.related-word-minibox {
+    margin: 20px;
+}
+
+.related-word {
+    background: white;
+    border: 3px solid black;
+    border-radius: 40px;
+    box-shadow: 10px 10px 0px 0px rgba(255, 104, 158, 1);
+    height: 100px;
+    padding: 0px 0px 20px 0px;
+}
+
+.related-word li {
+    margin: 0;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.related-text01 {
+    font-size: 40px;
+    margin: 0;
+    color: black;
+}
+
+.related-text02 {
+    margin: 0px;
+    font-size: 20px;
+    color: black;
 }
 
 
@@ -484,9 +550,6 @@ footer {
     padding: 10px 0px 100px 0px;
 }
 
-.dictionary-box {
-    width: 100%;
-}
 
 .contents {
     background:rgb(255, 255, 255);
@@ -496,7 +559,7 @@ footer {
 
 /*見出し*/
 .word-wrap {
-    background: rgb(105, 105, 105);
+    background: white;
     padding: 10px;
     border-radius: 40px 40px 0px 0px;
 }
@@ -505,7 +568,7 @@ footer {
     font-size: 60px; /*HOW TO USEの文字サイズ*/
     font-weight: bold; /*太さ*/
     margin: 0;
-    padding: 40px 50px 0px 50px;
+    padding: 100px 50px 0px 50px;;
     text-align: center;
 }
 
@@ -535,21 +598,34 @@ footer {
     color: red;
 }
 
+
+
+/*戻るボタン*/
 .return-box {
     margin: 300px;
 }
 
 .return-button {
-    background: black;
-    width: 300px;
+    background: white;
+    width: 400px;
     text-align: center;
     border-radius: 40px;
     margin: 0 auto;
+    border: 3px solid black;
+    box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+    padding: 30px;
 }
 
-.return-button p {
-    color: white;
-    padding: 40px;
+.return-text01 {
+    color: black;
+    margin: 0;
+    font-size: 30px;
+}
+
+.return-text02 {
+    color: black;
+    font-size: 20px;
+    margin: 0;
 }
 
 
@@ -559,7 +635,7 @@ footer {
 /*大画面より小さいサイズ*/
 @media screen and (max-width: 2559px){
     .content.is-display {
-        width: 1584px;
+        width: 100%;
       }
 }
 
@@ -567,14 +643,18 @@ footer {
 /*PCサイズ*/
 @media screen and (max-width: 1690px){
     .content.is-display {
-        width: 1150px;
+        width: 100%;
+      }
+
+      .lisu-box {
+        margin: 57px 57px 200px 57px;
       }
 
       .text-img li {
         width: 200px;
       }
 
-     .page_visual {
+     .page-visual {
         width: 500px;
         height: auto;
       }
