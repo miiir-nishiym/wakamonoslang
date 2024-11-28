@@ -30,6 +30,19 @@ body {
   }
 
 
+  /* ドット基本 */
+
+  .box{
+    width:500px;
+    height:200px;
+  }
+.bg_dot{
+    background-color: #fff;
+    background-image:
+      radial-gradient(#000000 30%, transparent 30%);
+    background-size: 20px 20px;
+  }
+
 
 
 
@@ -196,7 +209,8 @@ header img {
 .list-box {
     padding: 140px 57px;
     background-color: white;
-    margin: 57px 400px 200px 400px;
+    margin: 100px auto;
+    width: 1100px;
     border-radius: 43px;
 }
 
@@ -299,7 +313,7 @@ header img {
     display: block;
     border: 2px solid #ffffff;
     height: auto;
-    width: 1595px;
+    width: 100%;
     margin: 0 auto; /*中央寄せ*/
 }
 
@@ -319,7 +333,7 @@ header img {
 }
 
 .text-img li {
-	width: 20%;/*←画像を横に2つ並べる場合*/
+	width: 200px;
 	margin: 30px;
 	box-sizing:border-box;
 }
@@ -328,7 +342,7 @@ header img {
     width: 100%;
     height: auto;
     margin: 10px;
-    box-shadow: 10px 10px 0px 0px rgba(255, 104, 158, 1);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0);
     border: solid 3px #000000;
     border-radius: 40px;
 }
@@ -337,6 +351,7 @@ header img {
     text-align: center;
     font-size: 20px;
     margin: 0;
+    color: black;
 }
 
 
@@ -347,6 +362,8 @@ header img {
 .j-name {
     text-align: center;
     font-size: 50px;
+    margin: 200px 0px 50px 0px;
+
 }
 
 
@@ -367,11 +384,12 @@ header img {
     justify-content: start;
     flex-wrap: wrap;
     background: #fff;
-    width: 100%;
+    width: 800px;
     border-radius: 20px;
 }
 
 .j-word-minibox {
+    width: 350px;
     margin: 20px;
 }
 
@@ -379,9 +397,8 @@ header img {
     background: white;
     border: 3px solid black;
     border-radius: 40px;
-    box-shadow: 10px 10px 0px 0px rgba(255, 104, 158, 1);
+    box-shadow: 5px 5px 0px 0px rgba(0,0,0);
     height: 100px;
-    padding: 0px 0px 20px 0px;
 }
 
 .j-word li {
@@ -391,14 +408,14 @@ header img {
 }
 
 .j-text01 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
     color: black;
 }
 
 .j-text02 {
     margin: 0px;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
 }
 
@@ -443,7 +460,7 @@ footer {
 }
 
 .page-visual {
-    width: 700px;
+    width: 500px;
     height: auto;
     margin: 0 auto;
     padding: 100px 0px;
@@ -456,7 +473,7 @@ footer {
 
 
 .dictionary-box {
-    width: 900px;
+    width: 1100px;
     margin: 300px auto;
 }
 
@@ -468,7 +485,7 @@ footer {
 }
 
 .related-minibox {
-    padding: 300px;
+    padding: 200px 650px;
 }
 
 
@@ -520,7 +537,6 @@ footer {
     border-radius: 40px;
     box-shadow: 10px 10px 0px 0px rgba(255, 104, 158, 1);
     height: 100px;
-    padding: 0px 0px 20px 0px;
 }
 
 .related-word li {
@@ -530,7 +546,7 @@ footer {
 }
 
 .related-text01 {
-    font-size: 40px;
+    font-size: 30px;
     margin: 0;
     color: black;
 }
@@ -554,13 +570,13 @@ footer {
 .contents {
     background:rgb(255, 255, 255);
     border-radius: 0px 0px 40px 40px;
-    padding: 140px 70px 70px 70px;
+    padding: 10px 90px 70px 90px;
 }
 
 /*見出し*/
 .word-wrap {
     background: white;
-    padding: 10px;
+    padding: 90px;
     border-radius: 40px 40px 0px 0px;
 }
 
@@ -568,35 +584,50 @@ footer {
     font-size: 60px; /*HOW TO USEの文字サイズ*/
     font-weight: bold; /*太さ*/
     margin: 0;
-    padding: 100px 50px 0px 50px;;
     text-align: center;
 }
 
 .word02 {
     font-size: 30px;
     margin: 0;
-    padding: 0px 50px 40px 50px;
     text-align: center;
 }
 
 /*コンテンツの中身*/
 
 .text01 {
-    font-size: 30px; /*文字サイズ*/
-    font-weight: bold; /*太さ*/
+    font-size: 35px; /*文字サイズ*/
+    font-weight: 900; /*太さ*/
     margin: 0;
-    padding: 0;
+    padding: 0px 0px 10px 0px;
 }
 
 .text02 {
-    font-size: 20px;
+    font-size: 25px;
     margin: 0;
-    padding: 0px 0px 70px 0px;
+    padding: 0px 0px 10px 0px;
+    color: #2d2d2d;
 }
 
 .text-color {
-    color: red;
+    color: rgba(255, 104, 158, 1);
+    font-weight: 900;
 }
+
+.text-box {
+    padding: 0px 0px 50px 0px;
+}
+
+.text-box ul {
+    margin: 0px;
+}
+
+.text-box li  {
+    font-size: 25px;
+    color: #2d2d2d;
+}
+
+
 
 
 
@@ -637,6 +668,10 @@ footer {
     .content.is-display {
         width: 100%;
       }
+
+      .related-minibox {
+        padding: 200px 650px;
+      }
 }
 
 
@@ -657,6 +692,10 @@ footer {
      .page-visual {
         width: 500px;
         height: auto;
+      }
+
+      .related-minibox {
+        padding: 200px;
       }
 }
 
@@ -697,38 +736,6 @@ footer {
 }
 
 
-/*iPad縦サイズ*/
-@media screen and (max-width: 1290px){
-    .hello-box {
-        display: block;
-        text-align: center;
-    }
-
-    .textbox {
-        margin: 0 auto 200px;
-    }
-
-    .hello {
-        padding: 200px 0px 100px;
-    }
-
-    .how-box {
-        flex-direction: column-reverse;
-    }
-
-     .how {
-        padding: 200px 0px 100px;
-     }
-
-     .content.is-display {
-        width: 900px;
-     }
-
-     .text-img li {
-        width: 240px;
-    }
-}
-
 
 
 
@@ -767,7 +774,6 @@ footer {
     }
     
     .hello-text {
-        background: #c4c4c4; 
         border-radius: 40px; /*角丸*/
         margin: 10px 50px 10px;
         padding: 10px;
@@ -783,7 +789,6 @@ footer {
     .article02 {
         flex-direction: column-reverse;
         display: flex;
-        background: #c4c4c4; 
         padding: 100px; 
         align-items: center; /*上下の中央に配置*/
     }
@@ -805,7 +810,6 @@ footer {
     }
     
     .how-text {
-        background: rgb(255, 255, 255); 
         border-radius: 40px; /*角丸*/
         margin: 10px 50px 10px;
         padding: 10px;
@@ -900,35 +904,136 @@ footer {
 
 
 
-/*スマホ縦サイズ*/
-@media screen and (max-width: 800px){
+/*iPad縦サイズ*/
+@media screen and (max-width: 450px){
 
-    .textbox {
+    .nav-box {
         width: 100%;
     }
 
+    .article02 {
+        padding: 0;
+    }
+
     .hello-box {
-        padding: 0;
+        display: block;
+        text-align: center;
+        padding: 30px;
     }
 
-    .how-text {
+    .textbox {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .hello {
+        padding: 100px 0px;
+    }
+
+    .how-box {
+        flex-direction: column-reverse;
+        padding: 30px;
+    }
+
+     .how {
+        padding: 100px 0px;
+     }
+
+     .hello-text {
+        margin: 0 auto;
+     }
+
+     .hello-text p {
+        font-size: 20px;
+        text-align: start;
+     }
+
+     .how-text {
         margin: 0;
-    }
-
-    .text-img li {
-        width: 40%;
-    }
-
-    .content {
         padding: 0;
+     }
+
+     .how-text p {
+        font-size: 20px;
+     }
+
+     .how-text-box {
+        margin: 50px;
+     }
+
+     .content.is-display {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+     }
+
+     .text-img {
+        margin: 50px auto;
+     }
+
+     .text-img li {
+        width: 150px;
+        margin: 20px;
     }
 
-    .content.is-display {
-        width: 99%;
+    .list-box {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        margin: 150px auto;
+        border-radius: 70px;
     }
 
-    
+    .tab {
+        margin: 30px auto;
+        border-radius: 30px;
+    }
+
+    .tab-mini01 {
+        font-size: 20px;
+    }
+
+    .tab-mini02 {
+        font-size: 15px;
+    }
+
+    .tab-box {
+        display: block;
+    }
+
+    .tab-minibox {
+        padding: 10px;
+    }
+
+
+    .j-word-box {
+        display: block;
+        width: 100%;
+    }
+
+    .j-word-minibox {
+        margin: 20px auto;
+        
+    }
+
+    .j-word {
+        border: 2px solid black;
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+    .j-word li {
+        padding: 10px;
+    }
+
+
+    .j-text01 {
+        font-size: 20px;
+    }
+
+    .list {
+        padding: 100px 20px 50px 20px;
+    }
 }
-
-
 
