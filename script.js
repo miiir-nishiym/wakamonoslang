@@ -1,3 +1,15 @@
+//ハンバーガーメニュー
+//const ham = document.querySelector('#js-hamburger');
+//const nav = document.querySelector('#js-nav');
+
+//ham.addEventListener('click', function () {
+
+  //ham.classList.toggle('active');
+  //nav.classList.toggle('active');
+
+//});
+
+
 
 //戻るボタン
 const btn = document.getElementById("btn");
@@ -30,23 +42,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //個別ページ
-document.addEventListener('DOMContentLoaded', function () {
-  const targets = document.getElementsByClassName('tab02');
-  for (let i = 0; i < targets.length; i++) {
-      targets[i].addEventListener('click', changeTab, false);
-  }
+//document.addEventListener('DOMContentLoaded', function () {
+  //const targets = document.getElementsByClassName('tab02');
+  //for (let i = 0; i < targets.length; i++) {
+      //targets[i].addEventListener('click', changeTab, false);
+  //}
   // タブメニューボタンをクリックすると実行
-  function changeTab() {
+  //function changeTab() {
       // タブのclassを変更
-      document.getElementsByClassName('is-active')[0].classList.remove('is-active');
-      this.classList.add('is-active');
+      //document.getElementsByClassName('is-active')[0].classList.remove('is-active');
+      //this.classList.add('is-active');
       // コンテンツのclassの値を変更
-      document.getElementsByClassName('is-display')[0].classList.remove('is-display');
-      const arrayTabs = Array.prototype.slice.call(targets);
-      const index = arrayTabs.indexOf(this);
-      document.getElementsByClassName('content02')[index].classList.add('is-display');
-  };
-}, false);
+      //document.getElementsByClassName('is-display')[0].classList.remove('is-display');
+      //const arrayTabs = Array.prototype.slice.call(targets);
+      //const index = arrayTabs.indexOf(this);
+      //document.getElementsByClassName('content02')[index].classList.add('is-display');
+  //};
+//}, false);
 
 
 
