@@ -11,7 +11,8 @@ body {
     font-style: normal;
 
     /*背景を固定する*/
-    background-image: url("images/background.PNG");
+    /*background-image: url("images/background.PNG");*/
+    background: #80E2EC;
     background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,134 +28,120 @@ body {
     width:100px;
     height:100px;
     border-radius: 50%;
+    opacity: 0;
   }
+
+  
 
 
 
 
  
 
-/*ハンバーガーメニュー*/
-  .header__inner {
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: inherit;
-    position: relative;
-  }
 
 
-  .header__inner {
-    background: white;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: inherit;
-    position: relative;
-    
-  }
-
-  .header__title {
-    width: 80px;
-  }
-
-  .header__title img {
+  /* 
+hamburger(ハンバーガーアイコン)
+=================================== */
+.hamburger {
+    width: 100px;
+    height: 100px;
     display: block;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    background-color: #F4BCE9;
+    border: 3px solid #6564D7;
+    border-radius: 34px;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 300;
   }
   
-  .header__nav {
+  .hamburger__line {
     position: absolute;
+    width: 50px;
+    height: 5px;
+    right: 25px;
+    background-color: #6564D7;
+    transition: all 0.5s;
+  }
+  
+  .hamburger__line--1 {
+    top: 30px;
+  }
+  
+  .hamburger__line--2 {
+    top: 47px;
+  }
+  
+  .hamburger__line--3 {
+    top: 64px;
+  }
+  
+  /*ハンバーガーがクリックされたら*/
+  .open .hamburger__line--1 {
+    transform: rotate(-45deg);
+    top: 47px;
+  }
+  
+  .open .hamburger__line--2 {
+    opacity: 0;
+  }
+  
+  .open .hamburger__line--3 {
+    transform: rotate(45deg);
+    top: 47px;
+  }
+  
+  /* 
+  sp-nav(ナビ)
+  =================================== */
+  .sp-nav {
+    position: fixed;
+    right: -100%; /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+    top: 0;
+    width: 33%; /* 出てくるスライドメニューの幅 */
+    height: 80vh;
+    border-radius: 0px 0px 0px 43px;
+    background-color: #fff;
+    transition: all 0.5s;
+    z-index: 200;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+  }
+
+  .sp-nav-box {
+    padding: 150px 0px;
+  }
+  
+  /*ハンバーガーがクリックされたら右からスライド*/
+  .open .sp-nav {
     right: 0;
+  }
+  
+  
+  /* 
+  black-bg(ハンバーガーメニュー解除用bg)
+  =================================== */
+  .black-bg {
+    position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    transform: translateX(100%);
-    background-color: #fff;
-    transition: ease .4s;
-  }
-
-  .nav-items {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0;
-  }
-
-  .nav-items__item a {
-    color: black;
-    width: 100%;
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 24px;
-  }
-  
-  .nav-items__item:last-child a {
-    margin-bottom: 0;
-  }
-
-
-  .header__hamburger {
-    width: 48px;
-    height: 100%;
-  
-  }
-  
-  .hamburger {
-    background-color: transparent;
-    border-color: transparent;
-    z-index: 9999;
-  }
-
-  .hamburger span {
-    width: 100%;
-    height: 1px;
+    z-index: 5;
     background-color: #000;
-    position: relative;
-    transition: ease .4s;
-    display: block;
-  }
-  
-  .hamburger span:nth-child(1) {
-    top: 0;
-  }
-  
-  .hamburger span:nth-child(2) {
-    margin: 8px 0;
-  }
-  
-  .hamburger span:nth-child(3) {
-    top: 0;
-  }
-  
-  
-  /* ハンバーガーメニュークリック後のスタイル */
-  .header__nav.active {
-    transform: translateX(0);
-  }
-  
-  .hamburger.active span:nth-child(1) {
-    top: 5px;
-    transform: rotate(45deg);
-  }
-  
-  .hamburger.active span:nth-child(2) {
     opacity: 0;
-  
+    visibility: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 100;
   }
   
-  .hamburger.active span:nth-child(3) {
-    top: -13px;
-    transform: rotate(-45deg);
-  } 
-
-
+  /*ハンバーガーメニューが開いたら表示*/
+  .open .black-bg {
+    opacity: 0.3;
+    visibility: visible;
+  }
 
 
 
@@ -216,9 +203,10 @@ nav li {
 
 nav a {
     display: block;
-    color: black;
-    font-size: 20px;
+    color: #343461;
+    font-size: 40px;
     text-decoration: none;
+    font-weight: 700;
 }
 
 nav a:hover {
@@ -242,7 +230,7 @@ header img {
 .hello-box {
     display: flex;
     justify-content: center;
-    background: #51E4EC; 
+    background: #80E2EC; 
 	padding: 100px;  
     align-items: center; /*上下の中央に配置*/
 }
@@ -251,18 +239,8 @@ header img {
     width: 632px; /*枠の横幅を固定*/
 }
 
-.hello01 {
-    font-size: 90px; /*HELLOの文字サイズ*/
-    font-weight: bold; /*太さ*/
-    margin: 0;
-    color: white;
-}
-
-.hello02 {
-    margin: 0;
-    text-align: center;
-    font-size: 40px;
-    color: white;
+.hello img {
+    width: 100%;
 }
 
 .hello-text {
@@ -270,12 +248,14 @@ header img {
     border-radius: 40px; /*角丸*/
     margin: 10px 50px 10px;
     padding: 10px;
+    border: 5px solid #A1F1FB;
 }
 
 .hello-text p {
     margin: 50px; /*枠内の文字周り*/
     font-weight: 700;
     font-size: 25px;
+    color: #343461;
 }
 
 
@@ -298,20 +278,12 @@ header img {
     width: 700px; /*枠の横幅を固定*/
 }
 
-.how01 {
-    font-size: 60px; /*HOW TO USEの文字サイズ*/
-    font-weight: bold; /*太さ*/
-    margin: 0;
-}
-
-.how02 {
-    font-size: 30px;
-    margin: 0;
-    text-align: center;
+.how img {
+    width: 100%;
 }
 
 .how-text {
-    background: #51E4EC; 
+    border: 5px solid #80E2EC;
     border-radius: 40px; /*角丸*/
     margin: 10px 50px 10px;
     padding: 10px;
@@ -322,6 +294,7 @@ header img {
     margin: 50px;
     font-weight: 700;
     font-size: 25px;
+    color: #343461;
 }
 
 
@@ -338,21 +311,15 @@ header img {
 
 
 .list {
-    padding: 0px 0px 50px 0px; 
+    width: 40%;
+    margin: 0 auto;
 }
 
-.list01 {
-    font-size: 100px; /*HELLOの文字サイズ*/
-    font-weight: bold; /*太さ*/
-    margin: 0;
-    text-align: center;
+.list img {
+    width: 100%;
 }
 
-.list02 {
-    font-size: 50px;
-    margin: 0;
-    text-align: center;
-}
+
 
 
 
@@ -382,28 +349,28 @@ header img {
 .tab-mini01 {
     font-size: 30px;
     margin: 0;
+    color: #343461;
 }
 
 .tab-mini02 {
     font-size: 20px;
     margin: 0;
+    color: #343461;
 }
 
 
 /*タブを押したとき*/
 .tab-button .is-active {
-    background: #51E4EC;
-    border: 3px solid black;
-    box-shadow: 5px 5px 0px 0px rgb(0, 0, 0);
-    color: black;
+    background: #80E2EC;
+    color: #343461;
+    border: solid 3px #6564D7;
 }
 
 /*タブを押していないとき*/
 .tab {
     width: 300px;
     background-color: white;
-    border: 3px solid black; /*たぶ外線*/
-    box-shadow: 5px 5px 0px 0px rgb(0, 0, 0);
+    border: solid 3px #6564D7;
     margin: 20px;
     border-radius: 43px;
 
@@ -463,16 +430,23 @@ header img {
     width: 100%;
     height: auto;
     margin: 10px;
-    box-shadow: 5px 5px 0px 0px rgba(0,0,0);
-    border: solid 3px #000000;
+    border: solid 3px #6564D7;
     border-radius: 40px;
+    cursor: pointer;
+    transition: .1s cubic-bezier(0.45, 0, 0.55, 1);
 }
+
+.text-img img:hover {
+    transform: translateY(7px);
+    box-shadow: none;
+}
+
 
 .scene-text {
     text-align: center;
     font-size: 20px;
     margin: 0;
-    color: black;
+    color: #343461;
 }
 
 
@@ -483,7 +457,7 @@ header img {
 .j-name {
     text-align: center;
     font-size: 50px;
-    margin: 200px 0px 50px 0px;
+    color: #343461;
 
 }
 
@@ -497,6 +471,7 @@ header img {
     list-style: none;
     text-indent: -10px;/*←箇条点の位置をずらす*/
     width: 100%;
+    margin: 0px 0px 50px 0px;
 }
 
 
@@ -512,13 +487,19 @@ header img {
 .j-word-minibox {
     width: 350px;
     margin: 20px;
+    cursor: pointer;
+    transition: .1s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.j-word-minibox:hover {
+    transform: translateY(7px);
+    box-shadow: none;
 }
 
 .j-word {
     background: white;
-    border: 3px solid black;
+    border: 3px solid #6564D7;
     border-radius: 40px;
-    box-shadow: 5px 5px 0px 0px rgba(0,0,0);
     height: 100px;
 }
 
@@ -531,13 +512,13 @@ header img {
 .j-text01 {
     font-size: 30px;
     margin: 0;
-    color: black;
+    color: #343461;
 }
 
 .j-text02 {
     margin: 0px;
     font-size: 15px;
-    color: black;
+    color: #343461;
 }
 
 
@@ -548,7 +529,7 @@ a {
 
 /*フッター*/
 footer {
-    background-color: black;
+    background-color: #343461;
     color: white;
     width: 100%;
     height: 70px;
@@ -579,6 +560,7 @@ footer {
     font-size: 100px;
     margin: 0;
     padding: 100px 0px 0px 0px;
+    color: #343461;
 }
 
 .page-visual {
@@ -589,7 +571,7 @@ footer {
 }
 
 .page-visual img {
-    border: 3px solid black;
+    border: 3px solid #6564D7;
     border-radius: 34px;
 }
 
@@ -606,6 +588,15 @@ footer {
 
 /*関連する言葉一覧*/
 
+.related {
+    width: 80%;
+    margin: 0 auto; 
+}
+
+.related img {
+    width: 100%;
+}
+
 .related-box {
     background-color: white;
 }
@@ -621,12 +612,14 @@ footer {
     font-weight: bold; /*太さ*/
     margin: 0;
     text-align: center;
+    color: #343461;
 }
 
 .related02 {
     font-size: 30px;
     margin: 0;
     text-align: center;
+    color: #343461;
 }
 
 /*タグの調整*/
@@ -659,9 +652,8 @@ footer {
 
 .related-word {
     background: white;
-    border: 3px solid black;
+    border: 3px solid #6564D7;
     border-radius: 40px;
-    box-shadow: 5px 5px 0px 0px rgba(0, 0, 0);
     height: 100px;
 }
 
@@ -674,13 +666,13 @@ footer {
 .related-text01 {
     font-size: 30px;
     margin: 0;
-    color: black;
+    color: #343461;
 }
 
 .related-text02 {
     margin: 0px;
     font-size: 20px;
-    color: black;
+    color: #343461;
 }
 
 
@@ -697,6 +689,9 @@ footer {
     background:rgb(255, 255, 255);
     border-radius: 0px 0px 40px 40px;
     padding: 10px 90px 70px 90px;
+    border-bottom: 5px solid #A1F1FB;
+    border-left: 5px solid #A1F1FB;
+    border-right: 5px solid #A1F1FB;
 }
 
 /*見出し*/
@@ -704,6 +699,9 @@ footer {
     background: white;
     padding: 90px;
     border-radius: 40px 40px 0px 0px;
+    border-top: 5px solid #A1F1FB;
+    border-left: 5px solid #A1F1FB;
+    border-right: 5px solid #A1F1FB;
 }
 
 .word01 {
@@ -711,12 +709,14 @@ footer {
     font-weight: bold; /*太さ*/
     margin: 0;
     text-align: center;
+    color: #343461;
 }
 
 .word02 {
     font-size: 30px;
     margin: 0;
     text-align: center;
+    color: #343461;
 }
 
 /*コンテンツの中身*/
@@ -726,13 +726,14 @@ footer {
     font-weight: 900; /*太さ*/
     margin: 0;
     padding: 0px 0px 10px 0px;
+    color: #343461;
 }
 
 .text02 {
     font-size: 25px;
     margin: 0;
     padding: 0px 0px 10px 0px;
-    color: #2d2d2d;
+    color: #343461;
 }
 
 .text-color {
@@ -768,19 +769,18 @@ footer {
     text-align: center;
     border-radius: 40px;
     margin: 0 auto;
-    border: 3px solid black;
-    box-shadow: 10px 10px 0px 0px rgb(0, 0, 0);
+    border: 3px solid #6564D7;
     padding: 30px;
 }
 
 .return-text01 {
-    color: black;
+    color: #343461;
     margin: 0;
     font-size: 30px;
 }
 
 .return-text02 {
-    color: black;
+    color: #343461;
     font-size: 20px;
     margin: 0;
 }
@@ -821,8 +821,10 @@ footer {
       }
 
       .related-minibox {
-        padding: 200px;
+        padding: 200px 0px 200px 0px;
       }
+
+      
 }
 
 
@@ -835,7 +837,8 @@ footer {
     }
 
     .hello {
-        padding: 70px 70px 70px 50px;
+        width: 50%;
+        padding: 0px 50px 0px 0px;
     }
 
     .hello-box {
@@ -848,7 +851,8 @@ footer {
 
 
     .how {
-        padding: 70px 50px 70px 70px;
+        padding: 0px 0px 0px 50px;
+        width: 50%;
     }
 
     .how-text {
@@ -858,6 +862,24 @@ footer {
         
     .how-box {
         padding: 250px 125px;
+    }
+
+    .list img {
+        width: 100%;
+    }
+
+    .list {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .related {
+        width: 60%;
+        margin: 0 auto; 
+    }
+    
+    .related img {
+        width: 100%;
     }
 }
 
@@ -888,13 +910,11 @@ footer {
     }
     
     .hello01 {
-        font-size: 40px; /*HELLOの文字サイズ*/
         font-weight: bold; /*太さ*/
         margin: 0;
     }
     
     .hello02 {
-        font-size: 20px;
         margin: 0;
         text-align: center;
     }
@@ -924,13 +944,11 @@ footer {
     }
     
     .how01 {
-        font-size: 40px; /*HOW TO USEの文字サイズ*/
         font-weight: bold; /*太さ*/
         margin: 0;
     }
     
     .how02 {
-        font-size: 20px;
         margin: 0;
         text-align: center;
     }
@@ -958,14 +976,14 @@ footer {
     }
     
     .list01 {
-        font-size: 40px; /*HELLOの文字サイズ*/
+        font-size: 90px;
         font-weight: bold; /*太さ*/
         margin: 0;
         text-align: center;
     }
     
     .list02 {
-        font-size: 20px;
+        font-size: 40px;
         margin: 0;
         text-align: center;
     }
@@ -1007,7 +1025,7 @@ footer {
     
     .scene-text {
         text-align: center;
-        font-size: 16px;
+        font-size: 30px;
         margin: 0;
     }
     
@@ -1024,6 +1042,14 @@ footer {
         padding: 0;
     }
 
+    .dictionary-box {
+        width: 100%;
+    }
+    
+    .return-box {
+        margin: 100px auto;
+    }
+
 
 }
 
@@ -1031,10 +1057,14 @@ footer {
 
 
 /*iPad縦サイズ*/
-@media screen and (max-width: 450px){
+@media screen and (max-width: 900px){
 
     .nav-box {
         width: 100%;
+    }
+
+    .nav a {
+        font-size: 30px;
     }
 
     .article02 {
@@ -1049,11 +1079,14 @@ footer {
 
     .textbox {
         margin: 0 auto;
+        padding: 0px 0px 100px 0px;
         width: 100%;
     }
 
     .hello {
         padding: 100px 0px;
+        width: 60%;
+        margin: 0 auto;
     }
 
     .how-box {
@@ -1063,6 +1096,7 @@ footer {
 
      .how {
         padding: 100px 0px;
+        width: 80%;
      }
 
      .hello-text {
@@ -1070,7 +1104,7 @@ footer {
      }
 
      .hello-text p {
-        font-size: 20px;
+        font-size: 30px;
         text-align: start;
      }
 
@@ -1080,16 +1114,18 @@ footer {
      }
 
      .how-text p {
-        font-size: 20px;
+        font-size: 30px;
+        margin: 0;
+        padding: 30px 50px;
      }
 
      .how-text-box {
-        margin: 50px;
+        padding: 20px 0px;
      }
 
      .content.is-display {
-        width: 100%;
-        margin: 0;
+        width: 90%;
+        margin: 0 auto;
         padding: 0;
      }
 
@@ -1098,7 +1134,7 @@ footer {
      }
 
      .text-img li {
-        width: 150px;
+        width: 340px;
         margin: 20px;
     }
 
@@ -1111,29 +1147,29 @@ footer {
     }
 
     .tab {
-        margin: 30px auto;
+        margin: 10px;
         border-radius: 30px;
     }
 
     .tab-mini01 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .tab-mini02 {
-        font-size: 15px;
+        font-size: 20px;
     }
 
-    .tab-box {
+    /*.tab-box {
         display: block;
-    }
+    }*/
 
     .tab-minibox {
-        padding: 10px;
+        padding: 20px;
     }
 
 
     .j-word-box {
-        display: block;
+        /*display: block;*/
         width: 100%;
     }
 
@@ -1155,11 +1191,75 @@ footer {
 
 
     .j-text01 {
+        font-size: 30px;
+    }
+
+    .j-text02 {
         font-size: 20px;
     }
 
     .list {
-        padding: 100px 20px 50px 20px;
+        padding: 150px 0px 150px 0px;
+        width: 50%;
+        margin: 0 auto;
     }
+
+    .hamburger {
+        width: 60px;
+        height: 60px;
+        border-radius: 24px;
+        border: 2px solid #000;
+    }
+
+
+    .hamburger__line {
+        width: 20px;
+        height: 2px;
+        right: 21px;
+    }
+
+    .hamburger__line--1 {
+        top: 20px;
+    }
+
+    .hamburger__line--2 {
+        top: 30px;
+    }
+
+    .hamburger__line--3 {
+        top: 40px;
+    }
+
+    .open .hamburger__line--1 {
+        top: 30px;
+    }
+
+    .open .hamburger__line--3 {
+        top: 30px;
+    }
+
+    .sp-nav {
+        height: 70vh;
+     }
+
+     .sp-nav-box {
+        padding: 80px 0px 80px 0;
+     }
+
+
+
+     .text-img {
+        text-align: none;
+     }
+
+
+     .dictionary-box {
+        width: 100%;
+    }
+
+    .return-box {
+        margin: 100px auto;
+    }
+
 }
 

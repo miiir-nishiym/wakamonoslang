@@ -1,13 +1,16 @@
 //ハンバーガーメニュー
-//const ham = document.querySelector('#js-hamburger');
-//const nav = document.querySelector('#js-nav');
+window.onload = function () {
+  var nav = document.getElementById('nav-wrapper');
+  var hamburger = document.getElementById('js-hamburger');
+  var blackBg = document.getElementById('js-black-bg');
 
-//ham.addEventListener('click', function () {
-
-  //ham.classList.toggle('active');
-  //nav.classList.toggle('active');
-
-//});
+  hamburger.addEventListener('click', function () {
+      nav.classList.toggle('open');
+  });
+  blackBg.addEventListener('click', function () {
+      nav.classList.remove('open');
+  });
+};
 
 
 
@@ -19,6 +22,8 @@ btn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+
 
 
 //TOPページ
@@ -81,3 +86,5 @@ scorrllLinks.forEach((scorrllLink) => {
     });
   });
 });
+
+
