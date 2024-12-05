@@ -577,7 +577,8 @@ footer {
 
 .page-text-box p {
     font-size: 100px;
-    margin: 0px 0px 70px 0px;
+    margin: 0;
+    padding: 100px 0px 0px 0px;
 }
 
 .page-visual {
@@ -590,6 +591,10 @@ footer {
 .page-visual img {
     border: 3px solid black;
     border-radius: 34px;
+}
+
+.page-text {
+    background: #51E4EC;
 }
 
 
