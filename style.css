@@ -649,8 +649,15 @@ footer {
     border-radius: 20px;
 }
 
+.related-word-minibox:hover {
+    transform: translateY(7px);
+    box-shadow: none;
+}
+
 .related-word-minibox {
     margin: 20px;
+    cursor: pointer;
+    transition: .1s cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 .related-word {
