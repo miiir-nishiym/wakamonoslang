@@ -129,8 +129,8 @@ hamburger(ハンバーガーアイコン)
     transition: all 0.5s;
     z-index: 200;
     overflow-y: auto; /* メニューが多くなったらスクロールできるように */
-    border-bottom: 15px solid #80E2EC;
-    border-left: 5px solid #80E2EC;
+    border-bottom: 15px solid #02ccff;
+    border-left: 5px solid #02ccff;
   }
 
   .sp-nav-box {
@@ -237,7 +237,7 @@ nav a {
 }
 
 nav a:hover {
-    color: pink;
+    color: #02ccff;
 } 
 
 
@@ -469,7 +469,7 @@ header img {
     width: 100%;
     height: auto;
     margin: 10px;
-    border: solid 3px #6564D7;
+    border: 0.23vw solid #6564D7;
     border-radius: 40px;
     cursor: pointer;
     transition: .1s cubic-bezier(0.45, 0, 0.55, 1);
@@ -497,6 +497,7 @@ header img {
     text-align: center;
     font-size: 50px;
     color: #343461;
+    margin: 40px 0px 20px 0px;
 
 }
 
@@ -508,7 +509,7 @@ header img {
     justify-content: center;
     padding: 0;
     list-style: none;
-    text-indent: -10px;/*←箇条点の位置をずらす*/
+    /*text-indent: -10px;←箇条点の位置をずらす*/
     width: 100%;
     margin: 0px 0px 50px 0px;
 }
@@ -521,7 +522,7 @@ header img {
     background: #fff;
     width: 800px;
     border-radius: 20px;
-    padding: 0px 0px 0px 0.4vw;
+    padding: 0px 0px 0px 1vw;
     
 }
 
@@ -1008,7 +1009,7 @@ footer {
 
     .j-name {
         font-size: 3.6vw;
-        margin: 10vw 0px 5vw 0px;
+        margin: 2.4vw 0px 1.2vw 0px;
     }
 
     .tab-button {
@@ -1022,7 +1023,7 @@ footer {
 
     .j-word {
         border-radius: 2.5vw;
-        border: 0.23vw solid #6564D7;
+        border: solid 3px #6564D7;
         height: 7vw;
     }
 
@@ -1214,6 +1215,10 @@ footer {
      .text-img li {
         width: 40%;
         margin: 20px;
+    }
+
+    .text-img img {
+        border: solid 3px #6564D7
     }
 
     .list-box {
