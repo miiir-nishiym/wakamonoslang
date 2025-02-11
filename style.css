@@ -185,7 +185,7 @@ hamburger(ハンバーガーアイコン)
 .big-img {
     width: 65vw;
     height: auto;
-    margin: 0 18vw;
+    margin: 0 17vw;
     background: white; /*メインビジュアルと次の記事の隙間を埋める*/
 }
 
